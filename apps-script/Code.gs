@@ -1,12 +1,13 @@
 /**
  * L'Atelier 166 : réception du formulaire d'inscription.
  *
- * À coller dans le Google Sheet « Élèves » : Extensions > Apps Script.
- * Chaque envoi ajoute une ligne dans l'onglet ONGLET et envoie un mail à MAIL_NOTIF.
- * Le mail part du compte Google qui déploie le script : créer le Sheet et déployer
- * depuis le compte samuel@guitarisation.fr pour que l'expéditeur soit le bon.
+ * Projet Apps Script autonome « Atelier 166 · Inscriptions » (compte laguitarisation@gmail.com),
+ * déployé en application Web. Chaque envoi ajoute une ligne dans l'onglet ONGLET du
+ * Google Sheet « Élèves » et envoie un mail à MAIL_NOTIF, depuis l'alias
+ * samuel@guitarisation.fr s'il est configuré dans Gmail (sinon depuis le compte du script).
  */
 
+const SHEET_ID = "1snWJlo0vnNSY3YUV6SCH1JHjIEfsNZozZpQ0y88txHk"; // Google Sheet « Élèves »
 const ONGLET = "Atelier 166";
 const MAIL_NOTIF = "samuel@guitarisation.fr";
 
@@ -57,7 +58,7 @@ function doGet() {
 }
 
 function onglet_() {
-  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const ss = SpreadsheetApp.openById(SHEET_ID);
   let f = ss.getSheetByName(ONGLET);
   if (!f) {
     f = ss.insertSheet(ONGLET);
@@ -78,17 +79,14 @@ function notifier_(d, urlSheet) {
     .filter(([k]) => k !== "date" && k !== "statut" && d[k])
     .map(([k, titre]) => `<tr><td style="padding:4px 12px 4px 0;color:#6b5f52">${titre}</td><td style="padding:4px 0">${echapper_(d[k])}</td></tr>`)
     .join("");
-  const total = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(ONGLET).getLastRow() - 1;
-
-  MailApp.sendEmail({
-    to: MAIL_NOTIF,
-    replyTo: d.email,
-    subject: `Atelier 166 : nouvelle inscription de ${d.prenom} ${d.nom}`,
-    htmlBody:
-      `<p>Nouvelle demande de séance d'essai (${total} inscrit${total > 1 ? "s" : ""} au total).</p>` +
-      `<table style="font-family:Arial,sans-serif;font-size:14px">${lignes}</table>` +
-      `<p><a href="${urlSheet}">Ouvrir le Google Sheet</a></p>`,
-  });
+  const total = SpreadsheetApp.openById(SHEET_ID).getSheetByName(ONGLET).getLastRow() - 1;
+  const html =
+    `<p>Nouvelle demande de séance d'essai (${total} inscrit${total > 1 ? "s" : ""} au total).</p>` +
+    `<table style="font-family:Arial,sans-serif;font-size:14px">${lignes}</table>` +
+    `<p><a href="${urlSheet}">Ouvrir le Google Sheet</a></p>`;
+  const options = { htmlBody: html, replyTo: d.email, name: "L'Atelier 166" };
+  if (GmailApp.getAliases().indexOf(MAIL_NOTIF) !== -1) options.from = MAIL_NOTIF;
+  GmailApp.sendEmail(MAIL_NOTIF, `Atelier 166 : nouvelle inscription de ${d.prenom} ${d.nom}`, "", options);
 }
 
 function echapper_(s) {
@@ -100,6 +98,7 @@ function repondre(obj) {
 }
 
 // Lancer une fois à la main depuis l'éditeur pour autoriser le script et tester le mail.
+// Penser à supprimer ensuite la ligne « Test » dans le Sheet.
 function testerInscription() {
   doPost({ parameters: { prenom: ["Test"], nom: ["Atelier"], email: [MAIL_NOTIF], instrument: ["Guitare acoustique"], dispo: ["Oui, toutes les semaines"] } });
 }
