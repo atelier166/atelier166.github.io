@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 
@@ -33,21 +33,24 @@
 
   <!-- En-tête -->
   <section class="hero">
-    <img class="hero-photo"
-         src="images/atelier-1448.jpg"
-         srcset="images/atelier-800.jpg 800w, images/atelier-1448.jpg 1448w"
-         sizes="100vw" fetchpriority="high" decoding="async"
-         alt="" aria-hidden="true">
-    <div class="wrap">
-      <img class="logo" src="logo.svg" alt="Logo 166">
-      <h1>L'Atelier 166</h1>
-      <p class="accroche">La jam des musiciens débutants</p>
-      <div class="infos">
-        <span class="pastille">Chaque jeudi à 20 h</span>
-        <span class="pastille">Allonnes (49)</span>
-        <span class="pastille">Tous instruments</span>
+    <div class="wrap hero-grille">
+      <div class="hero-texte">
+        <img class="logo" src="logo.svg" alt="Logo 166">
+        <h1>L'Atelier 166</h1>
+        <p class="accroche">La jam des musiciens débutants</p>
+        <div class="infos">
+          <span class="pastille">Chaque jeudi à 20 h</span>
+          <span class="pastille">Allonnes (49)</span>
+          <span class="pastille">Tous instruments</span>
+        </div>
+        <a class="btn" href="#inscription">Réserver ma séance d'essai gratuite</a>
       </div>
-      <a class="btn" href="#inscription">Réserver ma séance d'essai gratuite</a>
+      <img class="hero-photo"
+           src="images/atelier-1448.jpg"
+           srcset="images/atelier-800.jpg 800w, images/atelier-1448.jpg 1448w"
+           sizes="(min-width: 900px) 560px, calc(100vw - 44px)"
+           width="1448" height="1086" fetchpriority="high" decoding="async"
+           alt="La salle de l'atelier : guitares posées sur le canapé, table basse, murs en bois">
     </div>
   </section>
 

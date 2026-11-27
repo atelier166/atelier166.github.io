@@ -17,7 +17,7 @@ HTML + CSS simples, hébergé sur GitHub Pages. Le formulaire écrit dans le Goo
 
 ## Crédits photo
 
-- Bloc d'en-tête (fond) : photo de la salle de l'atelier (photo personnelle). Deux tailles dans `images/` : `atelier-800.jpg` et `atelier-1448.jpg` (via `srcset`, la photo source fait 1448 px de large), sans métadonnées. Assombrie par un dégradé bois pour garder le texte lisible.
+- Bloc d'en-tête : photo de la salle de l'atelier (photo personnelle). Deux tailles dans `images/` : `atelier-800.jpg` et `atelier-1448.jpg` (via `srcset`, la photo source fait 1448 px de large), sans métadonnées.
 
 ## À compléter avant la mise en ligne
 
