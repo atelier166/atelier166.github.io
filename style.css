@@ -84,7 +84,6 @@ section { padding: 84px 0; }
   .hero-photo { align-self: center; }
 }
 @media (max-width: 899px) { .hero { padding: 72px 0 64px; } .hero-photo { max-width: 640px; margin: 0 auto; } }
-.hero .logo { width: 132px; height: 132px; margin: 0 auto 26px; filter: drop-shadow(0 10px 24px rgba(0,0,0,.4)); }
 .hero h1 { color: var(--creme); font-size: clamp(2.8rem, 8.5vw, 4.8rem); margin: 0 0 .15em; }
 .hero .accroche { font-size: clamp(1.15rem, 2.6vw, 1.45rem); color: var(--creme-2); margin-bottom: 0; }
 .hero .infos { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
