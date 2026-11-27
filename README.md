@@ -14,6 +14,10 @@ HTML + CSS simples, hébergé sur GitHub Pages. Le formulaire écrit dans le Goo
 | `apps-script/Code.gs` | Script à coller dans le Google Sheet (pas utilisé par GitHub Pages) |
 | `.nojekyll` | Dit à GitHub Pages de servir les fichiers tels quels |
 
+## Crédits photo
+
+- Section « Le concept » : photo de **cottonbro studio** sur Pexels, https://www.pexels.com/photo/7088373/ (licence Pexels, usage libre). Chargée depuis le CDN Pexels en deux tailles (800 px et 1600 px, via `srcset`).
+
 ## À compléter avant la mise en ligne
 
 1. `CONTACT@A-REMPLACER.fr` → le mail dédié (dans `index.html` et `mentions-legales.html`).
