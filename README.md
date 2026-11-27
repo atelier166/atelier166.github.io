@@ -16,7 +16,7 @@ HTML + CSS simples, hébergé sur GitHub Pages. Le formulaire écrit dans le Goo
 
 ## Crédits photo
 
-- Section « Le concept » : photo de **cottonbro studio** sur Pexels, https://www.pexels.com/photo/7088373/ (licence Pexels, usage libre). Chargée depuis le CDN Pexels en deux tailles (800 px et 1600 px, via `srcset`).
+- Bloc d'en-tête (fond) : photo de **Ketut Subiyanto** sur Pexels, https://www.pexels.com/photo/4670174/ (licence Pexels, usage libre). Chargée depuis le CDN Pexels en deux tailles (800 px et 1600 px, via `srcset`), assombrie par un dégradé bois pour garder le texte lisible.
 
 ## À compléter avant la mise en ligne
 
