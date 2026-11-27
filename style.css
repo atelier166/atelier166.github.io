@@ -84,6 +84,10 @@ section { padding: 84px 0; }
 .hero .accroche { font-size: clamp(1.15rem, 2.6vw, 1.45rem); color: var(--creme-2); margin-bottom: 0; }
 .hero .infos { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
 .pastille { background: rgba(246,239,227,.12); border: 1px solid rgba(246,239,227,.25); padding: 6px 14px; border-radius: 999px; font-size: .92rem; }
+.pastille.nouveau { background: var(--bois-clair); border-color: var(--bois-clair); color: var(--noir); font-weight: 700; }
+.fiche strong { color: var(--noir); }
+.autre-precision { margin-top: 12px; max-width: 360px; }
+.autre-precision[hidden] { display: none; }
 
 /* Grilles de cartes */
 .grille { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }

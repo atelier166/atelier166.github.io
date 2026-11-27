@@ -1,6 +1,6 @@
 # L'Atelier 166
 
-Site d'une page pour la jam hebdomadaire des musiciens débutants à Allonnes (49).
+Site d'une page pour L'Atelier 166, atelier hebdomadaire de musique en groupe (débutants et intermédiaires) à Allonnes (49).
 HTML + CSS simples, hébergé sur GitHub Pages. Le formulaire écrit dans le Google Sheet « Élèves » via Google Apps Script et envoie un mail de notification.
 
 ## Fichiers

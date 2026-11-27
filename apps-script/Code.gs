@@ -18,14 +18,10 @@ const COLONNES = [
   ["email", "E-mail"],
   ["telephone", "Téléphone"],
   ["instrument", "Instrument(s)"],
+  ["instrument_autre", "Autre instrument"],
   ["experience", "Joue depuis"],
   ["groupe", "Déjà joué avec d'autres"],
-  ["accords", "Accords / morceaux connus"],
-  ["envies", "Envies"],
-  ["dispo", "Dispo jeudi 20 h"],
-  ["materiel", "A son instrument"],
-  ["source", "Connu par"],
-  ["message", "Message"],
+  ["attentes", "Ce qu'il recherche"],
   ["statut", "Statut"],
 ];
 
@@ -100,5 +96,5 @@ function repondre(obj) {
 // Lancer une fois à la main depuis l'éditeur pour autoriser le script et tester le mail.
 // Penser à supprimer ensuite la ligne « Test » dans le Sheet.
 function testerInscription() {
-  doPost({ parameters: { prenom: ["Test"], nom: ["Atelier"], email: [MAIL_NOTIF], instrument: ["Guitare acoustique"], dispo: ["Oui, toutes les semaines"] } });
+  doPost({ parameters: { prenom: ["Test"], nom: ["Atelier"], email: [MAIL_NOTIF], instrument: ["Guitare acoustique"], attentes: ["Test du formulaire"] } });
 }
