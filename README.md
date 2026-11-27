@@ -8,7 +8,7 @@ HTML + CSS simples, hébergé sur GitHub Pages. Le formulaire écrit dans le Goo
 | Fichier | Rôle |
 |---|---|
 | `index.html` | La page d'accueil (contenu, formulaire, FAQ) |
-| `mentions-legales.html` | Mentions légales SF PROD + données personnelles |
+| `mentions-legales.html` | Mentions légales (sans nom de société) + données personnelles |
 | `style.css` | Styles (bois, crème, noir), responsive |
 | `images/` | Photo d'en-tête en 800 et 1448 px |
 | `logo.svg` | Logo « 166 », sert aussi d'icône d'onglet |
@@ -21,9 +21,8 @@ HTML + CSS simples, hébergé sur GitHub Pages. Le formulaire écrit dans le Goo
 
 ## À compléter avant la mise en ligne
 
-1. `CONTACT@A-REMPLACER.fr` → le mail dédié (dans `index.html` et `mentions-legales.html`).
-2. Les crochets `[...]` dans `mentions-legales.html` : capital, siège, SIREN/SIRET, TVA, nom du gérant (affiché seulement sur cette page, pas sur l'accueil).
-3. `URL_APPS_SCRIPT` dans `index.html` (étape 1 ci-dessous).
+1. `samuel@guitarisation.fr` → le mail dédié de l'atelier (dans `index.html` et `mentions-legales.html`).
+2. `URL_APPS_SCRIPT` dans `index.html` (étape 1 ci-dessous).
 
 ## Étape 1 : relier le formulaire au Google Sheet
 
