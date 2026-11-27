@@ -22,8 +22,11 @@ body {
   color: var(--texte);
   background: var(--creme);
 }
-h1, h2, h3, .logo-txt { font-family: "Space Grotesk", "Inter", sans-serif; line-height: 1.15; color: var(--noir); }
-h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin: 0 0 .6em; letter-spacing: -.02em; }
+h1, h2, h3 { line-height: 1.15; color: var(--noir); }
+/* Deux polices : DM Serif Display pour les titres (comme le logo), Inter pour tout le reste */
+h1, h2, .prix, .marque { font-family: "DM Serif Display", Georgia, serif; font-weight: 400; letter-spacing: 0; }
+h3 { font-family: inherit; font-weight: 700; }
+h2 { font-size: clamp(2rem, 4.4vw, 2.8rem); margin: 0 0 .5em; }
 h3 { font-size: 1.15rem; margin: 0 0 .4em; }
 p { margin: 0 0 1em; }
 a { color: var(--bois); }
@@ -42,7 +45,7 @@ section { padding: 84px 0; }
   background: rgba(26, 22, 18, .94); backdrop-filter: blur(8px);
 }
 .topbar .wrap { display: flex; align-items: center; justify-content: space-between; height: 62px; }
-.topbar .marque { display: flex; align-items: center; gap: 10px; color: var(--creme); text-decoration: none; font-weight: 700; }
+.topbar .marque { display: flex; align-items: center; gap: 10px; color: var(--creme); text-decoration: none; font-size: 1.2rem; }
 .topbar .marque img { width: 34px; height: 34px; }
 .topbar nav { display: flex; gap: 22px; }
 .topbar nav a { color: var(--creme-2); text-decoration: none; font-size: .92rem; }
@@ -82,7 +85,7 @@ section { padding: 84px 0; }
 }
 @media (max-width: 899px) { .hero { padding: 72px 0 64px; } .hero-photo { max-width: 640px; margin: 0 auto; } }
 .hero .logo { width: 132px; height: 132px; margin: 0 auto 26px; filter: drop-shadow(0 10px 24px rgba(0,0,0,.4)); }
-.hero h1 { color: var(--creme); font-size: clamp(2.6rem, 8vw, 4.6rem); margin: 0 0 .2em; letter-spacing: -.03em; }
+.hero h1 { color: var(--creme); font-size: clamp(2.8rem, 8.5vw, 4.8rem); margin: 0 0 .15em; }
 .hero .accroche { font-size: clamp(1.15rem, 2.6vw, 1.45rem); color: var(--creme-2); margin-bottom: 0; }
 .hero .infos { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
 .pastille { background: rgba(246,239,227,.12); border: 1px solid rgba(246,239,227,.25); padding: 6px 14px; border-radius: 999px; font-size: .92rem; }
@@ -112,7 +115,7 @@ section { padding: 84px 0; }
   background: var(--creme); color: var(--texte); border-radius: var(--rayon); padding: 26px;
   box-shadow: 0 24px 60px rgba(0,0,0,.45); transform: rotate(-1.5deg);
 }
-.fiche .titre { font-family: "Space Grotesk", sans-serif; font-weight: 700; color: var(--noir); border-bottom: 2px solid var(--bois-clair); padding-bottom: 10px; margin-bottom: 14px; }
+.fiche .titre { font-weight: 700; color: var(--noir); border-bottom: 2px solid var(--bois-clair); padding-bottom: 10px; margin-bottom: 14px; }
 .fiche ul { margin: 0; padding-left: 20px; }
 .fiche li { margin-bottom: 8px; }
 .fiche small { display: block; margin-top: 12px; color: var(--gris); }
@@ -134,8 +137,8 @@ section { padding: 84px 0; }
 .tarif { background: #fffaf2; border: 1px solid var(--creme-2); border-radius: var(--rayon); padding: 30px; }
 .tarif.fort { background: var(--noir); color: var(--creme); border-color: var(--noir); }
 .tarif.fort h3, .tarif.fort .prix { color: var(--creme); }
-.prix { font-family: "Space Grotesk", sans-serif; font-size: 2.6rem; font-weight: 700; color: var(--noir); line-height: 1; margin: 10px 0 14px; }
-.prix small { font-size: 1rem; font-weight: 500; }
+.prix { font-size: 2.8rem; color: var(--noir); line-height: 1; margin: 10px 0 14px; }
+.prix small { font-family: "Inter", sans-serif; font-size: 1rem; font-weight: 500; }
 .tarif ul { padding-left: 20px; margin: 0; }
 .tarif.fort li { color: var(--creme-2); }
 
@@ -171,7 +174,7 @@ fieldset { border: 0; padding: 0; margin: 0; }
 
 /* FAQ */
 .faq details { border-bottom: 1px solid var(--creme-2); padding: 18px 0; max-width: 760px; }
-.faq summary { cursor: pointer; font-weight: 700; font-family: "Space Grotesk", sans-serif; font-size: 1.1rem; color: var(--noir); list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+.faq summary { cursor: pointer; font-weight: 700; font-size: 1.05rem; color: var(--noir); list-style: none; display: flex; justify-content: space-between; gap: 16px; }
 .faq summary::-webkit-details-marker { display: none; }
 .faq summary::after { content: "+"; color: var(--bois); font-size: 1.4rem; line-height: 1; }
 .faq details[open] summary::after { content: "–"; }
@@ -181,7 +184,7 @@ fieldset { border: 0; padding: 0; margin: 0; }
 footer { background: var(--noir); color: #bfb2a0; padding: 44px 0; font-size: .92rem; }
 footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; align-items: center; }
 footer a { color: var(--creme-2); }
-footer .marque { display: flex; align-items: center; gap: 10px; color: var(--creme); font-weight: 700; }
+footer .marque { display: flex; align-items: center; gap: 10px; color: var(--creme); font-size: 1.2rem; }
 footer .marque img { width: 30px; height: 30px; }
 
 /* Page mentions légales */
