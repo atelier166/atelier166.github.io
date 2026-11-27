@@ -10,13 +10,14 @@ HTML + CSS simples, hébergé sur GitHub Pages. Le formulaire écrit dans le Goo
 | `index.html` | La page d'accueil (contenu, formulaire, FAQ) |
 | `mentions-legales.html` | Mentions légales SF PROD + données personnelles |
 | `style.css` | Styles (bois, crème, noir), responsive |
+| `images/` | Photo d'en-tête en 800 et 1448 px |
 | `logo.svg` | Logo « 166 », sert aussi d'icône d'onglet |
 | `apps-script/Code.gs` | Script à coller dans le Google Sheet (pas utilisé par GitHub Pages) |
 | `.nojekyll` | Dit à GitHub Pages de servir les fichiers tels quels |
 
 ## Crédits photo
 
-- Bloc d'en-tête (fond) : photo Pexels « Amis, groupe, instruments de musique, entraînement », https://www.pexels.com/photo/7802586/ (licence Pexels, usage libre ; nom du photographe à reporter ici depuis la page). Chargée depuis le CDN Pexels en deux tailles (800 px et 1600 px, via `srcset`), assombrie par un dégradé bois pour garder le texte lisible.
+- Bloc d'en-tête (fond) : photo de la salle de l'atelier (photo personnelle). Deux tailles dans `images/` : `atelier-800.jpg` et `atelier-1448.jpg` (via `srcset`, la photo source fait 1448 px de large), sans métadonnées. Assombrie par un dégradé bois pour garder le texte lisible.
 
 ## À compléter avant la mise en ligne
 
